@@ -17,7 +17,19 @@ Ex:
 
 void Ex5(char *str){
 	//Your codes here
-	
+	int i = 0, t=0;
+    while(str[i++] != '\0')
+    {
+        t++;
+    }
+    for(int i = 0; i <= (t / 2) - 1; i++){
+        if(!(str[i] + 1 == str[t - 1 - i] || str[i] + 2 == str[t - 1 - i]))
+        {
+            puts("Invalid!");
+            return;
+        }
+    }
+    puts("Valid!");
 }
 
 int main(int argc, char *argv[]) {
